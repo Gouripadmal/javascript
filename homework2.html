@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Information</title>
+</head>
+<body>
+
+<script>
+
+let contact1 = {
+
+    name: "Shradha",
+    phone: 99887766,
+    email: "gggg22@gmail.com",
+
+    getinfo: function () {
+
+        return this.name + " can be contacted at " +
+               this.phone + " or by email at " +
+               this.email + ".";
+
+    }
+
+};
+
+function printContactInfo(contact) {
+
+    console.log(contact.getinfo());
+
+}
+
+printContactInfo(contact1);
+let contact2 = {
+
+    name: "Chinna",
+    phone: 5544332211,
+    email: "ggggpp22@gmail.com",
+
+    getinfo: function () {
+
+        return this.name + " can be contacted at " +
+               this.phone + " or by email at " +
+               this.email + ".";
+
+    }
+
+};
+
+function printContactInfo(contact) {
+
+    console.log(contact.getinfo());
+
+}
+
+printContactInfo(contact2);
+
+</script>
+
+</body>
+</html>

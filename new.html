@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Input Example</title>
+</head>
+
+<body>
+
+    <h1>Hi!</h1>
+
+    <p>Enter your Name:</p>
+
+    <input id="my_text">
+    <br><br>
+
+    <button id="my_submit">Submit</button>
+
+    <script>
+
+        document.getElementById("my_submit").onclick = function () {
+
+            let name = document.getElementById("my_text").value;
+
+            console.log(name);
+
+        };
+
+    </script>
+
+</body>
+
+</html>

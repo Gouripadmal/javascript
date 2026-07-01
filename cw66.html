@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+</head>
+<body>
+    <script language = "JavaScript" type="text/javascript">
+        let fruits = ["apple", "orange", "banana", "grapes"];
+
+let prices = ["10", "50", "40", "100"];
+let merged = [
+  "Product: Apple - Price: 10",
+  "Product: orange - Price: 50",
+  "Product: banana - Price: 40",
+  "Product: Grapes - Price: 100"
+];
+
+
+
+
+let fLen = merged.length;
+text = "";
+for (i = 0; i < fLen; i++) {
+  text +=   merged[i]  + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+let productsAbove50 = [];
+
+for (let i = 0; i < prices.length; i++) {
+    if (prices[i] > 50) {
+        productsAbove50.push(merged[i]);
+    }
+}
+
+document.getElementById("demo1").innerHTML =
+productsAbove50.join("<br>");
+fruits.push("Watermelon");
+prices.push("80");
+
+merged.push("Product: Watermelon - Price: 80");
+document.getElementById("demo2").innerHTML =
+merged.join("<br>");
+
+    </script>
+</body>
+</html>

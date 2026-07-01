@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Dashboard</title>
+</head>
+<body>
+
+<h2>Student Result Dashboard</h2>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+
+<script>
+
+let students = [
+    {name: "Alice", score: 75},
+    {name: "Bob", score: 45},
+    {name: "Charlie", score: 95},
+    {name: "David", score: 65},
+    {name: "Eva", score: 30}
+];
+
+
+
+
+let names = students.map(function(student) {
+    return student.name;
+});
+
+document.getElementById("demo1").innerHTML =
+"<b>Student Names:</b><br>" + names.join("<br>");
+
+let above60 = students.filter(function(student) {
+    return student.score > 60;
+});
+
+let namesAbove60 = above60.map(function(student) {
+    return student.name;
+});
+
+document.getElementById("demo2").innerHTML =
+"<br><b>Students Scoring Above 60:</b><br>" +
+namesAbove60.join("<br>");
+
+
+
+
+let total = students.reduce(function(sum, student) {
+    return sum + student.score;
+}, 0);
+
+document.getElementById("demo3").innerHTML =
+"<br><b>Total Score:</b> " + total;
+
+
+
+
+let allPassed = students.every(function(student) {
+    return student.score > 35;
+});
+
+document.getElementById("demo4").innerHTML =
+"<br><b>All Students Passed?</b> " + allPassed;
+
+
+
+
+let above90 = students.some(function(student) {
+    return student.score > 90;
+});
+
+document.getElementById("demo5").innerHTML =
+"<br><b>Any Student Scored Above 90?</b> " + above90;
+
+
+
+students.sort(function(a, b) {
+    return b.score - a.score;
+});
+
+let result = "";
+
+students.forEach(function(student) {
+    result += student.name + " - " + student.score + "<br>";
+});
+
+document.getElementById("demo6").innerHTML =
+"<br><b>Students Sorted by Score:</b><br>" + result;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+       
+        let number = [2,5,8,1];
+        let largest = number[0] ;
+        let secondlargest = number[0];
+        fLen = number.length;
+        for (i = 0; i < fLen; i++) {
+  if( number[i] > secondlargest){
+secondlargest = number[i]
+document.write("The second largest no is "+secondlargest);
+console.log(secondlargest);
+if(number[i]<=secondlargest && secondlargest<largest){
+  
+  largest = number[i]
+console.log(largest);
+  
+  } 
+  
+  }
+}
+    </script>
+</body>
+</html>

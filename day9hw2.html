@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>s
+</head>
+<body>
+   <script>
+    let comment = prompt("Enter the comment");
+    let result = comment.replace(/b(bad|ugly|stpid)/gi, "****");
+    function filterComment(comment) {
+
+    let cleanedComment = comment.replace(/\b(bad|ugly|stupid)\b/gi, "***");
+
+    let numbers = comment.match(/\d+/g);
+    let numberCount = numbers ? numbers.length : 0;
+
+    let capitalWords = comment.match(/\b[A-Z][a-zA-Z]*\b/g);
+    let capitalCount = capitalWords ? capitalWords.length : 0;
+
+    console.log("Cleaned Comment: " + cleanedComment);
+    console.log("Number Count: " + numberCount);
+    console.log("Capitalized Word Count: " + capitalCount);
+}
+
+let userComment = prompt("Enter your comment:");
+filterComment(userComment);
+   </script> 
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+</head>
+<body>
+
+<input type="text" id="inp" placeholder="Enter Email">
+<button onclick="show()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+
+function show() {
+
+    let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    let mail = document.getElementById("inp").value;
+
+    if (regex.test(mail)) {
+        document.getElementById("result").textContent = "Valid Email";
+    }
+    else {
+        document.getElementById("result").textContent = "Invalid Email";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

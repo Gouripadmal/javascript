@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Array</title>
+</head>
+<body>
+
+<script language ="javascript" type="text/javascript">
+let arr = [2, 5, 8, 1];
+
+for (let start = 0, end = arr.length - 1; start < end; start++, end--) {
+    let temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp;
+}
+
+document.write("Reversed Array: " + arr);
+</script>
+
+</body>
+</html>

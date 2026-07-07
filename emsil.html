@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp" placeholder="enter the name" />
+<button onclick="show()">Submit</button>
+<p id="result"> </p>
+    <script language = "javascript" type="text/javascript">
+        function show (){
+let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+let mail = document.getElementById("inp").value;
+if (regex.test(mail)) {
+    document.getElementById("inp").textContent = "Valid Email";
+    
+} else {
+    document.getElementById.innerHtml("result").textContent = "InValid Email"
+    
+}
+        }
+    </script>
+</body>
+</html>
